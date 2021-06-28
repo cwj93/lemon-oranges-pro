@@ -1,7 +1,7 @@
 <!--
  * @Author: chenwenju
  * @Date: 2021-06-22 21:58:49
- * @LastEditTime: 2021-06-27 23:23:20
+ * @LastEditTime: 2021-06-28 21:58:00
  * @LastEditors: Please set LastEditors
  * @Description: 页面布局
  * @FilePath: \lemon-oranges-pro\src\Layout\index.vue
@@ -22,7 +22,7 @@
         <Menu active-name="/home" theme="dark" width="auto" :class="menuitemClasses" @on-select="onMenuSelect">
           <MenuItem name="/home">
             <Icon type="ios-navigate"></Icon>
-            <span>Home</span>
+            <span>首页</span>
           </MenuItem>
           <MenuItem name="/about">
             <Icon type="ios-search"></Icon>
@@ -71,7 +71,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
   .layout{
     border: 1px solid #d7dde4;
     background: #f5f7f9;

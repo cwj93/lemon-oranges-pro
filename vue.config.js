@@ -1,7 +1,7 @@
 /*
  * @Author: chenwenju
  * @Date: 2021-06-22 22:07:33
- * @LastEditTime: 2021-06-27 23:05:38
+ * @LastEditTime: 2021-06-28 22:06:08
  * @LastEditors: Please set LastEditors
  * @Description: 项目配置文件
  * @FilePath: \lemon-oranges-pro\vue.config.js
@@ -13,6 +13,11 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV !== 'production',
   // 调整 webpack 配置
   configureWebpack: config => {
+    config.resolve = {
+      alias:{
+        '@': path.resolve(__dirname,'./src')
+      }
+    }
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
     } else {
@@ -25,7 +30,7 @@ module.exports = {
       css: {
         // 这里的选项会传递给 css-loader
       },
-      postcss: {
+      // postcss: {
         // 这里的选项会传递给 postcss-loader
         // plugins: [
         //   // 补全css前缀(解决兼容性)
@@ -38,7 +43,7 @@ module.exports = {
         //     minPixelValue: 2 // 设置要替换的最小像素值。
         //   })
         // ]
-      }
+      // }
     }
   }
 }
