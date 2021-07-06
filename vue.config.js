@@ -6,6 +6,11 @@
  * @Description: 项目配置文件
  * @FilePath: \lemon-oranges-pro\vue.config.js
  */
+const path = require('path');
+function resolve (dir) {
+    return path.join(__dirname, dir)
+}
+// 项目的主要配置文件
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '/lemon/' : '/',
   outputDir: 'lemon',
@@ -15,7 +20,7 @@ module.exports = {
   configureWebpack: config => {
     config.resolve = {
       alias:{
-        '@': path.resolve(__dirname,'./src')
+        '@': resolve('./src')
       }
     }
     if (process.env.NODE_ENV === 'production') {
